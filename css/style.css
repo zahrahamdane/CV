@@ -135,10 +135,32 @@ aside .block .stars-container i {
   font-size: 2rem;
   margin: 0 1rem;
 }
+aside .block .social-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 2rem 0;
+}
+aside .block .social-container i {
+  flex: 2 0 50px;
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+aside .block .social-container p {
+  flex: auto;
+  margin: 0;
+}
 
 main {
   grid-area: main;
-  background: purple;
+  padding: 5rem;
+}
+main h2 {
+  margin-bottom: 4rem;
+}
+main p {
+  letter-spacing: 0.2rem;
+  line-height: 3rem;
 }
 
 /*# sourceMappingURL=style.css.map */
