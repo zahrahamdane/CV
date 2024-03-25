@@ -63,7 +63,7 @@ img {
 .grid-container {
   display: grid;
   min-height: 100vh;
-  grid: "picture header" auto "aside main" 1fr/350px auto;
+  grid: "picture header" auto "aside main" 1fr "footer footer" auto/350px auto;
 }
 
 header {
@@ -198,6 +198,59 @@ main .experience .content p {
 main .experience .content ul {
   list-style: circle;
   padding-left: 2rem;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 5rem;
+  background: var(--text);
+}
+footer h2 {
+  margin-bottom: 3rem;
+}
+footer form {
+  display: flex;
+  align-items: center;
+}
+footer form .prefix {
+  background: linear-gradient(to right, var(--dark), var(--light));
+  padding: 1rem 2rem;
+  color: white;
+  font-size: 2rem;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+footer form button {
+  background: var(--text);
+  border: 0;
+  cursor: pointer;
+}
+footer form button:hover {
+  opacity: 0.8;
+  transition: all 0.2s;
+}
+footer form button .postfix {
+  background: linear-gradient(to right, var(--dark), var(--light));
+  padding: 1rem 2rem;
+  color: white;
+  font-size: 2rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+footer form input {
+  outline: 0;
+  border: 0;
+  line-height: 2rem;
+  min-width: 400px;
+  padding: 1rem 2rem;
+}
+footer form input::placeholder {
+  color: var(--text);
 }
 
 /*# sourceMappingURL=style.css.map */

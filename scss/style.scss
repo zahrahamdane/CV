@@ -9,6 +9,7 @@
   grid:
     "picture header" auto
     "aside main" 1fr
+    "footer footer" auto
     / 350px auto;
 }
 
@@ -148,6 +149,62 @@ main {
       ul {
         list-style: circle;
         padding-left: 2rem;
+      }
+    }
+  }
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 5rem;
+  background: var(--text);
+  h2 {
+    margin-bottom: 3rem;
+  }
+  form {
+    display: flex;
+    align-items: center;
+
+    .prefix {
+      background: linear-gradient(to right, var(--dark), var(--light));
+      padding: 1rem 2rem;
+      color: white;
+      font-size: 2rem;
+      border-top-left-radius: 0.5rem;
+      border-bottom-left-radius: 0.5rem;
+    }
+
+    button {
+      background: var(--text);
+      border: 0;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.8;
+        transition: all 0.2s;
+      }
+      .postfix {
+        background: linear-gradient(to right, var(--dark), var(--light));
+        padding: 1rem 2rem;
+        color: white;
+        font-size: 2rem;
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+      }
+    }
+
+    input {
+      outline: 0;
+      border: 0;
+      line-height: 2rem;
+      min-width: 400px;
+      padding: 1rem 2rem;
+      &::placeholder {
+        color: var(--text);
       }
     }
   }
