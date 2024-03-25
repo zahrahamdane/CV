@@ -1,6 +1,7 @@
 @use "base" as *;
 @use "reset" as *;
 @use "classes" as *;
+@use "utils" as *;
 
 .grid-container {
   display: grid;
@@ -37,7 +38,7 @@ header {
   grid-area: picture;
   padding: 6rem;
   background: var(--background);
-  border-right: 1px solid #ddd;
+  border-right: 1px solid var(--border);
   img {
     border-radius: 50%;
   }
@@ -46,7 +47,7 @@ header {
 aside {
   grid-area: aside;
   background: var(--background);
-  border-right: 1px solid #ddd;
+  border-right: 1px solid var(--border);
   padding: 5rem;
   min-height: 1500px;
   .block {
@@ -100,7 +101,7 @@ aside {
       align-items: center;
       margin: 2rem 0;
       i {
-        flex: 2 0 50px;
+        flex: 0 0 50px;
         font-size: 2rem;
         margin-right: 1rem;
       }
@@ -122,5 +123,32 @@ main {
   p {
     letter-spacing: 0.2rem;
     line-height: 3rem;
+  }
+
+  .experience {
+    display: flex;
+    margin: 6rem 0;
+    .timeline {
+      text-align: center;
+      color: var(--hint);
+      padding-right: 2rem;
+      border-right: 1px solid var(--border);
+      p {
+        margin: 0;
+      }
+    }
+    .content {
+      padding: 0 1rem;
+      h3 {
+        margin: 0;
+      }
+      p {
+        margin: 0;
+      }
+      ul {
+        list-style: circle;
+        padding-left: 2rem;
+      }
+    }
   }
 }

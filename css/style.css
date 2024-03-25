@@ -48,6 +48,17 @@ img {
 .text-primary {
   color: var(--primary);
 }
+.text-hint {
+  color: var(--hint);
+}
+
+.mb-5 {
+  margin-bottom: 5rem !important;
+}
+
+.mb-2 {
+  margin-bottom: 2rem !important;
+}
 
 .grid-container {
   display: grid;
@@ -80,7 +91,7 @@ header p {
   grid-area: picture;
   padding: 6rem;
   background: var(--background);
-  border-right: 1px solid #ddd;
+  border-right: 1px solid var(--border);
 }
 .picture img {
   border-radius: 50%;
@@ -89,7 +100,7 @@ header p {
 aside {
   grid-area: aside;
   background: var(--background);
-  border-right: 1px solid #ddd;
+  border-right: 1px solid var(--border);
   padding: 5rem;
   min-height: 1500px;
 }
@@ -142,7 +153,7 @@ aside .block .social-container {
   margin: 2rem 0;
 }
 aside .block .social-container i {
-  flex: 2 0 50px;
+  flex: 0 0 50px;
   font-size: 2rem;
   margin-right: 1rem;
 }
@@ -161,6 +172,32 @@ main h2 {
 main p {
   letter-spacing: 0.2rem;
   line-height: 3rem;
+}
+main .experience {
+  display: flex;
+  margin: 6rem 0;
+}
+main .experience .timeline {
+  text-align: center;
+  color: var(--hint);
+  padding-right: 2rem;
+  border-right: 1px solid var(--border);
+}
+main .experience .timeline p {
+  margin: 0;
+}
+main .experience .content {
+  padding: 0 1rem;
+}
+main .experience .content h3 {
+  margin: 0;
+}
+main .experience .content p {
+  margin: 0;
+}
+main .experience .content ul {
+  list-style: circle;
+  padding-left: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
