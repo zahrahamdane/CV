@@ -80,16 +80,25 @@ img {
     transform: rotate(0deg);
   }
 }
+/* Landscape phones and down */
+/* Landscape phone to portrait tablet */
+/* Portrait tablet to landscape and desktop */
+/* Large desktop */
 .grid-container {
   display: grid;
   min-height: 100vh;
   grid: "picture header" auto "aside main" 1fr "footer footer" auto/350px auto;
 }
+@media (max-width: 480px) {
+  .grid-container {
+    grid: "header" auto "main" auto "picture" auto "aside" auto "footer" auto/auto;
+  }
+}
 
 header {
   grid-area: header;
   background: linear-gradient(to right, var(--primary), var(--light));
-  padding: 2rem 5rem;
+  padding: 10rem 5rem;
   text-align: center;
   color: white;
   display: flex;
@@ -97,11 +106,21 @@ header {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 480px) {
+  header {
+    padding: 5rem 2rem;
+  }
+}
 header h1 {
   font-size: 6rem;
   line-height: 8rem;
   font-weight: 300;
   letter-spacing: 3rem;
+}
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 3rem;
+  }
 }
 header h1 span {
   display: inline-block;
@@ -113,7 +132,7 @@ header p {
 
 .picture {
   grid-area: picture;
-  padding: 2rem;
+  padding: 6rem;
   background: var(--background);
   border-right: 1px solid var(--border);
 }
@@ -170,7 +189,7 @@ aside .block .stars-container i {
   font-size: 2rem;
   margin: 0 1rem;
 }
-aside .block .social-container {
+aside .block .social-container a {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -179,20 +198,20 @@ aside .block .social-container {
   transition: all 0.2s;
   cursor: pointer;
 }
-aside .block .social-container:hover {
+aside .block .social-container a:hover {
   background: var(--border);
 }
-aside .block .social-container:hover i {
+aside .block .social-container a:hover i {
   color: var(--primary);
   transform: scale(1.3);
   transition: all 0.2s;
 }
-aside .block .social-container i {
+aside .block .social-container a i {
   flex: 0 0 50px;
   font-size: 2rem;
   margin-right: 1rem;
 }
-aside .block .social-container p {
+aside .block .social-container a p {
   flex: auto;
   margin: 0;
 }
@@ -200,6 +219,11 @@ aside .block .social-container p {
 main {
   grid-area: main;
   padding: 5rem;
+}
+@media (max-width: 480px) {
+  main {
+    padding: 5rem 1.5rem;
+  }
 }
 main h2 {
   margin-bottom: 4rem;
@@ -245,6 +269,11 @@ footer {
   padding: 5rem;
   background: var(--text);
 }
+@media (max-width: 480px) {
+  footer {
+    padding: 5rem 1.5rem;
+  }
+}
 footer h2 {
   margin-bottom: 3rem;
 }
@@ -283,6 +312,11 @@ footer form input {
   line-height: 2rem;
   min-width: 400px;
   padding: 1rem 2rem;
+}
+@media (max-width: 480px) {
+  footer form input {
+    min-width: 200px;
+  }
 }
 footer form input::placeholder {
   color: var(--text);

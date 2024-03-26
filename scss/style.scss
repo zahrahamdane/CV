@@ -3,6 +3,7 @@
 @use "classes" as *;
 @use "utils" as *;
 @use "animations" as *;
+@use "media-queries" as *;
 
 .grid-container {
   display: grid;
@@ -12,23 +13,39 @@
     "aside main" 1fr
     "footer footer" auto
     / 350px auto;
+
+  @include xs {
+    grid:
+      "header" auto
+      "main" auto
+      "picture" auto
+      "aside" auto
+      "footer" auto
+      / auto;
+  }
 }
 
 header {
   grid-area: header;
   background: linear-gradient(to right, var(--primary), var(--light));
-  padding: 2rem 5rem;
+  padding: 10rem 5rem;
   text-align: center;
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @include xs {
+    padding: 5rem 2rem;
+  }
   h1 {
     font-size: 6rem;
     line-height: 8rem;
     font-weight: 300;
     letter-spacing: 3rem;
+    @include xs {
+      font-size: 3rem;
+    }
     span {
       display: inline-block;
       animation: bounce 2s;
@@ -42,7 +59,7 @@ header {
 
 .picture {
   grid-area: picture;
-  padding: 2rem;
+  padding: 6rem;
   background: var(--background);
   border-right: 1px solid var(--border);
   img {
@@ -101,7 +118,7 @@ aside {
       }
     }
 
-    .social-container {
+    .social-container a {
       display: flex;
       justify-content: start;
       align-items: center;
@@ -134,6 +151,9 @@ aside {
 main {
   grid-area: main;
   padding: 5rem;
+  @include xs {
+    padding: 5rem 1.5rem;
+  }
   h2 {
     margin-bottom: 4rem;
   }
@@ -178,6 +198,9 @@ footer {
   align-items: center;
   color: white;
   padding: 5rem;
+  @include xs {
+    padding: 5rem 1.5rem;
+  }
   background: var(--text);
   h2 {
     margin-bottom: 3rem;
@@ -218,6 +241,9 @@ footer {
       border: 0;
       line-height: 2rem;
       min-width: 400px;
+      @include xs {
+        min-width: 200px;
+      }
       padding: 1rem 2rem;
       &::placeholder {
         color: var(--text);
